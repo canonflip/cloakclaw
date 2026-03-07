@@ -1,0 +1,7 @@
+test/
+tests/
+.git/
+.DS_Store
+node_modules/
+*.test.js
+skill/
