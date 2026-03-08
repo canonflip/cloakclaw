@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CloakClaw — Privacy Proxy</title>
-<link rel="icon" href="data:image/png;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QCERXhpZgAATU0AKgAAAAgAAwEPAAIAAAAMAAAAMgEyAAIAAAAUAAAAPodpAAQAAAABAAAAUgAAAABJZGVvZ3JhbSBBSQAyMDI2OjAzOjA2IDAzOjQzOjIyAAADoAEAAwAAAAEAAQAAoAIABAAAAAEAAAAgoAMABAAAAAEAAAAgAAAAAP/tADhQaG90b3Nob3AgMy4wADhCSU0EBAAAAAAAADhCSU0EJQAAAAAAENQdjNmPALIE6YAJmOz4Qn7/wAARCAAgACADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9sAQwACAgICAgIDAgIDBQMDAwUGBQUFBQYIBgYGBgYICggICAgICAoKCgoKCgoKDAwMDAwMDg4ODg4PDw8PDw8PDw8P/9sAQwECAgIEBAQHBAQHEAsJCxAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQ/90ABAAC/9oADAMBAAIRAxEAPwD8Jeoo5xSdAT6V9U658MPD83gLw/pXhCJrjXLyKCe7lkiSPbPNEsu1riRsldpAjjiAGCXcnAr6CriOWcYKLbl2V7W3bOnB5c61OpU5klG27tdvRJd2fK468mkIyc+lfVOhfC/QIfAniHSfGETW+uWUU89pLHEkm6eGJpdq3EbZC7QRJHIMYAdCMmvlUcjPtRSxHNOUHFpx7q3zQY3LnRhTqcyakujvZp2afZo//9D8LbKS3hu4JbuLzoEdWdM43qDkrn3HFfYfhP45/D/w1p8VtqekDUrGOYeVFAFjlt8LlWCttBU9MDoQTxu+b4zAor28XgIVmnJtW7Nr8j0cqzurg+b2cYu/8yUl9zun8/zPs3xZ8c/h/wCJtPlttN0j+zLF5j5sc4WSW5yuWYqu4BR0wepIPO35fju9ktpbyeW0j8mB3Zo4852KTkLk+g4qv70hNGEwMaN3Ft37tv8AMWa51VxnL7SMVb+VJL7lovkf/9k=">
+<link rel="icon" href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAqACoDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD7LoorB8XeJrXw+tvCYjdX12222tlcIX5AJLHhVGRkmplJRV2aUqU6slCCuzeoqno18mo6ZDeo0LhwfmhYshIJB2sQNwyODjmsHRfGllfa4NJnWKJ5xus5o5g8dwOcr0BRxtIKsOMfSk6kVa73Kjh6kuay+Hc6qiiirMQrx344w6fc63BdzNBdm0spE+zeeVAmyGQS45CHocEMMg9K9irgfE/gie7a9ktRHP5/mSIkj4+cjPP1JYEjqAgPC1jWTcdFc78vqxpVeZycdLXWm+m/Q80ufHOvpd2lrZSWcdhcRxi522EkK2u3jYYtzNIFAGDEwB71Z8OT2Op+O7bXLj7JZXEOo+ZNcKrW8M0QT/WPEWYpIzHpnGOW5NdEfgnYTGOaHW7+2jZQWhlt42dTjkZBwP1+pq/o3w7ksTcW9opjgEzCGW4YF2TaOWC+rDGBjcmQQMgVNSpOquV0ktd9/wDhv60vqd9N4WguanXk3Zpq1t+/f8dt9LHpykFQQQQRwRS1Bp9rHZWMFpEWMcMYjUscnAGBU9dB4TtfQKKKKBBRRRQAUUUUAf/Z">
 <style>
   :root {
     --bg: #0d1117; --bg2: #161b22; --bg3: #21262d; --border: #30363d;
@@ -22,8 +22,9 @@
   .status-dot.on { background: var(--green); }
   .status-dot.off { background: var(--red); }
 
-  .tabs { display: flex; gap: 0; background: var(--bg2); border-bottom: 1px solid var(--border); padding: 0 24px; }
-  .tab { padding: 10px 20px; cursor: pointer; color: var(--dim); border-bottom: 2px solid transparent; font-size: 14px; transition: all 0.2s; }
+  .tabs { display: flex; gap: 0; background: var(--bg2); border-bottom: 1px solid var(--border); padding: 0 24px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab { padding: 10px 14px; cursor: pointer; color: var(--dim); border-bottom: 2px solid transparent; font-size: 13px; transition: all 0.2s; white-space: nowrap; flex-shrink: 0; }
   .tab:hover { color: var(--text); }
   .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
 
@@ -88,6 +89,8 @@
 
   .spinner { display: inline-block; width: 14px; height: 14px; border: 2px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.6s linear infinite; }
   @keyframes spin { to { transform: rotate(360deg); } }
+  @keyframes slideDown { from { opacity: 0; max-height: 0; padding: 0 18px; } to { opacity: 1; max-height: 600px; padding: 16px 18px; } }
+  .session-card.active { border-color: var(--accent); background: var(--bg3); }
 
   /* Progress Feed */
   .progress-feed { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 14px; margin-top: 16px; font-family: 'SF Mono', 'Fira Code', monospace; font-size: 12px; max-height: 300px; overflow-y: auto; display: none; }
@@ -165,6 +168,7 @@
   <div class="tab" data-panel="sessions">📋 Sessions</div>
   <div class="tab" data-panel="features">💡 Feature Requests</div>
   <div class="tab" data-panel="settings">⚙️ Settings</div>
+  <div class="tab" data-panel="support">❤️ Support</div>
 </div>
 
 <div class="container">
@@ -385,6 +389,63 @@
     </div>
   </div>
 
+  </div>
+
+  <!-- ═══ SUPPORT PANEL ═══ -->
+  <div class="panel" id="panel-support">
+    <div style="text-align:center;max-width:600px;margin:0 auto">
+      <div style="font-size:3rem;margin-bottom:12px">❤️</div>
+      <h2 style="font-size:22px;margin-bottom:8px">Support CloakClaw</h2>
+      <p style="color:var(--dim);font-size:14px;margin-bottom:28px;line-height:1.6">
+        CloakClaw is free, open-source, and built by a small team. If it's saved you time or kept your data safe, consider supporting development.
+      </p>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;text-align:left">
+        
+        <a href="https://github.com/sponsors/canonflip" target="_blank" style="text-decoration:none">
+          <div class="settings-group" style="cursor:pointer;transition:border-color .2s;height:100%">
+            <h3>💜 GitHub Sponsors</h3>
+            <p style="font-size:13px;color:var(--dim);margin-top:6px;line-height:1.5">Monthly or one-time. Directly funds development. Get a sponsor badge on your GitHub profile.</p>
+            <p style="font-size:12px;color:var(--accent);margin-top:8px">github.com/sponsors/canonflip →</p>
+          </div>
+        </a>
+
+        <a href="https://github.com/canonflip/cloakclaw" target="_blank" style="text-decoration:none">
+          <div class="settings-group" style="cursor:pointer;transition:border-color .2s;height:100%">
+            <h3>⭐ Star on GitHub</h3>
+            <p style="font-size:13px;color:var(--dim);margin-top:6px;line-height:1.5">Free and takes 2 seconds. Stars help others discover CloakClaw and show community support.</p>
+            <p style="font-size:12px;color:var(--accent);margin-top:8px">github.com/canonflip/cloakclaw →</p>
+          </div>
+        </a>
+
+        <a href="https://www.npmjs.com/package/cloakclaw" target="_blank" style="text-decoration:none">
+          <div class="settings-group" style="cursor:pointer;transition:border-color .2s;height:100%">
+            <h3>📢 Spread the Word</h3>
+            <p style="font-size:13px;color:var(--dim);margin-top:6px;line-height:1.5">Tell a colleague, write a blog post, share on social media. Word of mouth is our best marketing.</p>
+            <p style="font-size:12px;color:var(--accent);margin-top:8px">@cloakclaw on X/Twitter →</p>
+          </div>
+        </a>
+
+        <a href="https://github.com/canonflip/cloakclaw/issues" target="_blank" style="text-decoration:none">
+          <div class="settings-group" style="cursor:pointer;transition:border-color .2s;height:100%">
+            <h3>🐛 Report Bugs & Ideas</h3>
+            <p style="font-size:13px;color:var(--dim);margin-top:6px;line-height:1.5">Found a bug? Have a feature idea? Open an issue. Every report makes CloakClaw better for everyone.</p>
+            <p style="font-size:12px;color:var(--accent);margin-top:8px">Open an issue →</p>
+          </div>
+        </a>
+
+      </div>
+
+      <div style="margin-top:28px;padding:16px;background:var(--bg3);border-radius:8px">
+        <p style="font-size:13px;color:var(--dim);line-height:1.6">
+          Built with 🦀 by <a href="https://canonflip.com" target="_blank" style="color:var(--accent)">Canonflip</a>.
+          Local-first. Privacy-native. Agent-powered.<br>
+          <span style="font-size:12px">MIT Licensed · Your data never leaves your machine.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <script>
@@ -420,7 +481,7 @@ document.querySelectorAll('.tab').forEach(tab => {
 // Status check
 async function checkStatus() {
   try {
-    const r = await fetch(API + '/api/status');
+    const r = await fetch(API + '/api/status', { credentials:'include'});
     const d = await r.json();
     const dot = document.getElementById('ollamaStatus');
     const label = document.getElementById('ollamaLabel');
@@ -505,7 +566,7 @@ function toggleAllEntities(on) {
 // Password management
 async function loadPasswordStatus() {
   try {
-    const r = await fetch(API + '/api/password/status');
+    const r = await fetch(API + '/api/password/status', { credentials:'include'});
     const d = await r.json();
     const el = document.getElementById('pwStatus');
     const currentRow = document.getElementById('pwCurrentRow');
@@ -532,7 +593,7 @@ async function setDbPassword() {
     const body = { password: pw };
     const current = document.getElementById('pwCurrent').value;
     if (current) body.current = current;
-    const r = await fetch(API + '/api/password/set', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+    const r = await fetch(API + '/api/password/set', { credentials:'include', method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
     const d = await r.json();
     if (d.ok) {
       msg.textContent = '✓ Password set!';
@@ -553,7 +614,7 @@ async function removeDbPassword() {
   const msg = document.getElementById('pwMsg');
   if (!pw) { msg.textContent = '✗ Enter current password first'; msg.style.color = 'var(--red)'; return; }
   try {
-    const r = await fetch(API + '/api/password/remove', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ password: pw }) });
+    const r = await fetch(API + '/api/password/remove', { credentials:'include', method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ password: pw }) });
     const d = await r.json();
     if (d.ok) {
       msg.textContent = '✓ Password removed';
@@ -573,7 +634,7 @@ updateEntityToggles();
 // Feature Requests
 async function loadFeatures() {
   try {
-    const r = await fetch(API + '/api/features');
+    const r = await fetch(API + '/api/features', { credentials:'include'});
     const d = await r.json();
     const el = document.getElementById('featureList');
     if (!d.requests.length) {
@@ -605,7 +666,7 @@ async function submitFeature() {
   if (!title) return;
   const status = document.getElementById('frStatus');
   try {
-    await fetch(API + '/api/features', {
+    await fetch(API + '/api/features', { credentials:'include',
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -628,7 +689,7 @@ async function submitFeature() {
 
 async function voteFeature(id, btn) {
   try {
-    await fetch(API + `/api/features/${id}/vote`, { method: 'POST' });
+    await fetch(API + `/api/features/${id}/vote`, { credentials:'include', method: 'POST' });
     btn.classList.add('voted');
     loadFeatures();
   } catch {}
@@ -685,7 +746,7 @@ async function doCloak() {
   let typingLine = null;
 
   try {
-    const resp = await fetch(API + '/api/cloak/stream', {
+    const resp = await fetch(API + '/api/cloak/stream', { credentials:'include',
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -804,7 +865,7 @@ async function doDecloak() {
   const status = document.getElementById('decloakStatus');
   status.innerHTML = '<span class="spinner"></span> Decloaking...';
   try {
-    const r = await fetch(API + '/api/decloak', {
+    const r = await fetch(API + '/api/decloak', { credentials:'include',
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ text, sessionId }),
@@ -822,7 +883,7 @@ async function doDecloak() {
 
 async function loadSessionSelect() {
   try {
-    const r = await fetch(API + '/api/sessions?limit=20');
+    const r = await fetch(API + '/api/sessions?limit=20', { credentials:'include'});
     const d = await r.json();
     const sel = document.getElementById('sessionSelect');
     sel.innerHTML = '<option value="">Select a session...</option>';
@@ -836,7 +897,7 @@ async function loadSessionSelect() {
 // Sessions
 async function loadSessions() {
   try {
-    const r = await fetch(API + '/api/sessions?limit=50');
+    const r = await fetch(API + '/api/sessions?limit=50', { credentials:'include'});
     const d = await r.json();
     const el = document.getElementById('sessionList');
     const statsEl = document.getElementById('sessionStats');
@@ -854,7 +915,7 @@ async function loadSessions() {
       const profileIcons = { legal: '📜', financial: '💰', email: '✉️' };
       const icon = profileIcons[s.profile] || '📄';
       return `
-      <div class="session-card" onclick="loadSession('${s.id}')">
+      <div class="session-card" id="card-${s.id}" onclick="loadSession('${s.id}')">
         <div style="display:flex;align-items:center;gap:8px">
           <span style="font-size:1.3rem">${icon}</span>
           <span class="id">${s.id.slice(0,8)}…</span>
@@ -872,31 +933,53 @@ async function loadSessions() {
 
 async function loadSession(id) {
   try {
-    const r = await fetch(API + '/api/session/' + id);
+    // Remove any previously open inline detail
+    document.querySelectorAll('.inline-detail').forEach(el => el.remove());
+    // Reset any highlighted cards
+    document.querySelectorAll('.session-card.active').forEach(el => el.classList.remove('active'));
+
+    const card = document.getElementById('card-' + id);
+    if (!card) return;
+    card.classList.add('active');
+
+    const r = await fetch(API + '/api/session/' + id, {credentials:'include'});
     const d = await r.json();
-    const el = document.getElementById('sessionDetail');
-    el.style.display = 'block';
-    let html = `<h3 style="font-size:15px;margin-bottom:12px">Session ${d.session.id.slice(0,8)}… <span class="profile-badge">${d.session.profile}</span></h3>`;
-    html += `<table class="mapping-table"><thead><tr><th>Type</th><th>Original</th><th>→</th><th>Replacement</th></tr></thead><tbody>`;
-    d.mappings.forEach(m => {
-      html += `<tr><td class="type">${m.entity_type}</td><td class="original">${esc(m.original)}</td><td style="color:var(--dim)">→</td><td class="replacement">${esc(m.replacement)}</td></tr>`;
-    });
-    html += '</tbody></table>';
-    el.innerHTML = html;
-  } catch {}
+
+    let html = `<div class="inline-detail" style="background:var(--bg3);border:1px solid var(--accent);border-radius:8px;padding:16px 18px;margin-bottom:10px;animation:slideDown .2s ease-out">`;
+    html += `<h3 style="font-size:14px;margin-bottom:10px">Session ${d.session.id.slice(0,8)}… <span class="profile-badge">${d.session.profile}</span></h3>`;
+    if (d.mappings && d.mappings.length) {
+      html += `<table class="mapping-table"><thead><tr><th>Type</th><th>Original</th><th>→</th><th>Replacement</th></tr></thead><tbody>`;
+      d.mappings.forEach(m => {
+        html += `<tr><td class="type">${m.entity_type}</td><td class="original">${esc(m.original)}</td><td style="color:var(--dim)">→</td><td class="replacement">${esc(m.replacement)}</td></tr>`;
+      });
+      html += '</tbody></table>';
+    } else {
+      html += '<p style="color:var(--dim)">No entities detected in this session.</p>';
+    }
+    html += '</div>';
+
+    card.insertAdjacentHTML('afterend', html);
+    card.nextElementSibling.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  } catch (e) {
+    console.error('loadSession error:', e);
+    const card = document.getElementById('card-' + id);
+    if (card) {
+      card.insertAdjacentHTML('afterend', `<div class="inline-detail" style="background:var(--bg3);border:1px solid var(--red);border-radius:8px;padding:16px;margin-bottom:10px"><p style="color:var(--red)">Error: ${esc(e.message)}</p></div>`);
+    }
+  }
 }
 
 // Settings
 async function loadSettings() {
   try {
-    const r = await fetch(API + '/api/config');
+    const r = await fetch(API + '/api/config', { credentials:'include'});
     const d = await r.json();
     document.getElementById('cfgOllamaUrl').value = d.ollama?.url || '';
     document.getElementById('cfgOllamaModel').value = d.ollama?.model || '';
 
     // Stats
     const stats = document.getElementById('statsArea');
-    const sr = await fetch(API + '/api/sessions?limit=1000');
+    const sr = await fetch(API + '/api/sessions?limit=1000', { credentials:'include'});
     const sd = await sr.json();
     const total = sd.sessions.length;
     const entities = sd.sessions.reduce((sum, s) => sum + (s.entity_count || 0), 0);
@@ -909,7 +992,7 @@ async function loadSettings() {
       </div>`;
 
     // Profiles
-    const pr = await fetch(API + '/api/profiles');
+    const pr = await fetch(API + '/api/profiles', { credentials:'include'});
     const pd = await pr.json();
     const profileIcons = { legal: '📜', financial: '💰', email: '✉️' };
     document.getElementById('profilesArea').innerHTML = pd.profiles.map(p => `
@@ -929,7 +1012,7 @@ async function testOllama() {
   const status = document.getElementById('settingsStatus');
   status.innerHTML = '<span class="spinner"></span> Testing...';
   try {
-    const r = await fetch(API + '/api/status');
+    const r = await fetch(API + '/api/status', { credentials:'include'});
     const d = await r.json();
     if (d.ollama.available) {
       status.textContent = `✓ Connected to ${d.ollama.model}`;
@@ -947,7 +1030,7 @@ async function testOllama() {
 async function saveSettings() {
   const status = document.getElementById('settingsStatus');
   try {
-    await fetch(API + '/api/config', {
+    await fetch(API + '/api/config', { credentials:'include',
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -994,7 +1077,7 @@ async function handleFile(file) {
   try {
     const form = new FormData();
     form.append('file', file);
-    const r = await fetch(API + '/api/extract', { method: 'POST', body: form });
+    const r = await fetch(API + '/api/extract', { credentials:'include', method: 'POST', body: form });
     const d = await r.json();
     if (d.error) throw new Error(d.error);
     document.getElementById('inputText').value = d.text;

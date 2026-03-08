@@ -41,7 +41,7 @@ console.log(chalk.cyan.bold('\n  🦀 CloakClaw Tests\n'));
 console.log(chalk.bold('  Encryption'));
 
 test('encrypt/decrypt round-trip', () => {
-  const original = 'Carl Moberg SSN 487-23-9156';
+  const original = 'Sarah Chen SSN 487-23-9156';
   const enc = encrypt(original);
   assert(enc.startsWith('enc:'), 'Should start with enc:');
   assert(enc !== original, 'Should not be plaintext');

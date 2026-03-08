@@ -1,6 +1,6 @@
 {
   "name": "cloakclaw",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Local AI privacy proxy — redact sensitive data before sending to cloud LLMs, then restore originals in the response.",
   "type": "module",
   "bin": {
