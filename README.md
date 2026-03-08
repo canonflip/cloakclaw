@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://cloakclaw.com/cloakclaw-logo.jpg" alt="CloakClaw" width="120" />
+  <img src="logo.jpg" alt="CloakClaw" width="150" />
 </p>
 
 <h1 align="center">🦀 CloakClaw</h1>
