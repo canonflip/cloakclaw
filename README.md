@@ -2,7 +2,7 @@
   <img src="logo.jpg" alt="CloakClaw" width="150" />
 </p>
 
-<h1 align="center">🦀 CloakClaw</h1>
+<h1 align="center">CloakClaw</h1>
 
 <p align="center">
   <strong>Local AI privacy proxy</strong> — redact sensitive data before sending to cloud LLMs, restore originals in the response.
